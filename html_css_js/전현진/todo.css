@@ -1,0 +1,45 @@
+.box {
+    background: white;
+    width: 512px;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+    margin: 0 auto;
+    margin-top: 4rem;
+    align-items: center;
+}
+
+.title {
+    padding: 1rem;
+    text-align: center;
+    font-weight: 100;
+    background: #22b8cf;
+    color: white;
+}
+
+#myInput {
+    width: 460px;
+}
+
+ul li.checked {
+    text-decoration: line-through;
+    color: #adb5bd;
+}
+
+ul li:hover {
+    background-color: #ade2eb;
+}
+
+ul li:hover .remove {
+    opacity: 1;
+}
+
+.ulBox {
+    padding-bottom: 1px;
+}
+
+.remove {
+    float: right;
+    margin-right: 1rem;
+    color: #e64980;
+    font-weight: 600;
+    opacity: 0;
+}

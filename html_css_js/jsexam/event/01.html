@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id = "btn" onclick="hello()">눌러봐~</button>
+    <button id = "btn2">눌러봐~</button>
+    <script>
+        //event
+        //소스(대상) = 이벤트리스너 ( 이벤트이름(ex click), 이벤트 핸들러(함수), [ToCapture] )
+
+        function hi (){
+            alert("안녕");
+        }
+        function hello() {
+            alert("ㅋㅋ");
+        }
+        document.addEventListener('click', hi);
+        const btn2 = document.getElementById("btn2");
+        console.log(btn2);
+        btn2.addEventListener('click', hi);
+    </script>
+</body>
+</html>

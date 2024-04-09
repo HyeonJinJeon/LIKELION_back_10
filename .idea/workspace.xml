@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="c830c13a-e75a-4469-8d3e-892e6d1f2c0c" name="Changes" comment="README 수정">
+      <change afterPath="$PROJECT_DIR$/algorithmTest/.idea/jpa-buddy.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/LIKELION_back_10.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HappyJava/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/HappyJava/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/algorithmTest/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/algorithmTest/.idea/gradle.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/algorithmTest/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/algorithmTest/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/algorithmTest/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/algorithmTest/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/html_css_js/jsexam/33.html" beforeDir="false" afterPath="$PROJECT_DIR$/html_css_js/jsexam/33.html" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ExternalProjectsData">
+    <projectState path="$PROJECT_DIR$">
+      <ProjectState />
+    </projectState>
+  </component>
+  <component name="ExternalProjectsManager">
+    <system id="GRADLE">
+      <state>
+        <projects_view>
+          <tree_state>
+            <expand />
+            <select />
+          </tree_state>
+        </projects_view>
+      </state>
+    </system>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="2ea5C0Dp4TNGTvkQ88dLDTNkk3P" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/jeonhyeonjin/Desktop/__run/LIKELION_back_10&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settingsdialog.project.gradle&quot;
+  }
+}</component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="c830c13a-e75a-4469-8d3e-892e6d1f2c0c" name="Changes" comment="" />
+      <created>1712129725668</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1712129725668</updated>
+      <workItem from="1712129758339" duration="4439000" />
+      <workItem from="1712304447843" duration="11000" />
+      <workItem from="1712304519348" duration="119000" />
+      <workItem from="1712304670657" duration="1832000" />
+      <workItem from="1712306711225" duration="82000" />
+      <workItem from="1712306865222" duration="1220000" />
+      <workItem from="1712308183203" duration="171000" />
+    </task>
+    <task id="LOCAL-00001" summary="실습 코드">
+      <created>1712130530538</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1712130530547</updated>
+    </task>
+    <task id="LOCAL-00002" summary="README 수정">
+      <created>1712131543804</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1712131543834</updated>
+    </task>
+    <task id="LOCAL-00003" summary="README 수정">
+      <created>1712131621573</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1712131621584</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="실습 코드" />
+    <MESSAGE value="README 수정" />
+    <option name="LAST_COMMIT_MESSAGE" value="README 수정" />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
+  </component>
+</project>

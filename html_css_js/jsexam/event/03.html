@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button>색상 변경</button>
+    <button>색상 변경</button>
+    <button>색상 변경</button>
+    <button>색상 변경</button>
+    <button>색상 변경</button>
+    <script>
+        //function changeColor(event) {
+        //    const color = prompt("색을 입력하세요.");
+        //    document.body.style.backgroundColor = color;
+        //}
+
+        const changeColor = (event) => {
+            console.log(event);
+            console.log("event target ::: " + this);
+            console.log(this);
+            console.log(event.target);
+
+            //const color = prompt("색을 입력하세요.");
+            document.body.style.backgroundColor = randomRGB();
+            for(let i = 0; i < btn.length; i++){
+                btn[i].removeEventListener("click", changeColor);
+            }
+        }
+        const btn = document.querySelectorAll("button");
+        for(let i = 0; i < btn.length; i++){
+            btn[i].addEventListener("click", changeColor);
+        }
+        function randomRGB() {
+            const rColor = Math.floor(Math.random() * 256);
+            const gColor = Math.floor(Math.random() * 256);
+            const bColor = Math.floor(Math.random() * 256);
+            return `rgb(${rColor},${gColor},${bColor})`;
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="todo.css" />
+    <title>Document</title>
+</head>
+
+<body>
+    <section class="box">
+        <div class="title">
+            <h1>
+                My To Do
+            </h1>
+        </div>
+        <div class="inputBox">
+            <input type="text" id="myInput" placeholder="할 일" onkeydown="enterKey(event)">
+            <button onclick="addTodo()" style="background-color: #22b8cf; color:white;">추가</button>
+        </div>
+        <div class="ulBox">
+            <ul id="UL">
+                <li>Todo 1<span class="remove">x</span></li>
+                <li class="checked">Todo 2<span class="remove">x</span></li>
+            </ul>
+        </div>
+    </section>
+    <script src="todo.js"></script>
+</body>
+
+</html>
