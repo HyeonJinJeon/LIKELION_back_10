@@ -10,11 +10,17 @@ public class ExceptionExam01 {
         //try에서 예외가 발생되면 예외가 발생한 시점부터 try의 마지막까지 실행을 할 수 없다.
         //따라서 try를 잘 묶어줘야 된다.
         try {
-//            int result = 10/0;
+            int result = 10/0;
             System.out.println(arr[3]);
             System.out.println("거울을 본다.");
         }catch (ArrayIndexOutOfBoundsException e){
-            System.out.println(arr[0]);
+//            System.out.println(arr[0]);
+            System.out.println(e.toString());
+            System.out.println(e.getMessage());
+        }catch (Exception e){
+            System.out.println(e);
+            System.out.println(e.getMessage());
+            e.printStackTrace();
         }
 
         System.out.println("다음 문장1");
