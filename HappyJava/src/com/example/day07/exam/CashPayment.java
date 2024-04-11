@@ -1,4 +1,4 @@
-package com.example.day07.Exam;
+package com.example.day07.exam;
 
 public class CashPayment implements Payment{
 
