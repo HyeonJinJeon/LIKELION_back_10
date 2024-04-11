@@ -7,6 +7,7 @@ public class Test {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         Bank bank = new Bank("국민은행");
+        Account account;
 //        bank.getAccountList(); // 계좌 정보를 불러옵니다.
 
         while(true){
@@ -17,8 +18,8 @@ public class Test {
                 bank.makeAccount();
             }else if(choose == 2){
                 System.out.println("계좌 정보를 확인하기 위해 계좌번호를 입력하세요.");
-                Account account = bank.findAccount();
-                if(account != null){
+                try{
+                    account = bank.findAccount();
                     while(true){
                         System.out.println("입금을 원하시면 1번, 출금을 원하시면 2번을 눌러주세요. 작업을 취소하시려면 다른 번호를 눌러주세요.");
                         choose = sc.nextInt();
@@ -39,6 +40,8 @@ public class Test {
                             break;
                         }
                     }
+                }catch (CustomException e){
+                    System.out.println(e.getMessage());
                 }
             }else{
                 break;

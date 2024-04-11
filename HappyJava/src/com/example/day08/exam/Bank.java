@@ -45,7 +45,7 @@ public class Bank {
         return result;
     }
 
-    public Account findAccount() {
+    public Account findAccount() throws CustomException{
         int number = sc.nextInt();
         for (Account account : accountList) {
             if (account.getNumber() == number) {
@@ -53,7 +53,7 @@ public class Bank {
                 return account;
             }
         }
-        System.out.println("일치하는 계좌가 없습니다.");
-        return null;
+//        System.out.println("일치하는 계좌가 없습니다.");
+        throw new CustomException("일치하는 계좌가 없습니다.");
     }
 }
