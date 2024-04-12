@@ -25,7 +25,9 @@ public class Account {
 
     public void input(int addMoney){
         this.remain = this.remain + addMoney;
-        System.out.println("통장잔고가 " + addMoney + "가 입금되어 " + this.remain + "이 되었습니다.");
+        System.out.println("------------------------------------");
+        System.out.println("입금된 금액: " + addMoney + " | 잔액:" + this.remain);
+        System.out.println("------------------------------------");
     }
 
     public void output(int minusMoney) throws CustomException{
@@ -33,6 +35,8 @@ public class Account {
             throw new CustomException("잔액이 부족합니댜");
         }
         this.remain = this.remain - minusMoney;
-        System.out.println(minusMoney + "를 출금하여 잔액 " + this.remain + "이 되었습니다");
+        System.out.println("------------------------------------");
+        System.out.println("출금된 금액:" + minusMoney + " | 잔액:" + this.remain);
+        System.out.println("------------------------------------");
     }
 }

@@ -11,17 +11,17 @@ public class Test {
 //        bank.getAccountList(); // 계좌 정보를 불러옵니다.
 
         while(true){
-            System.out.println("계좌를 생성하려면 1번, 계좌 정보를 조회한 후 서비스를 이용하려면 2번을 눌러주세요. 취소하시려면 다른 숫자를 눌러주세요.");
+            System.out.println("1.계좌 생성 | 2.계좌 정보 조회 | 3.작업종료");
             int choose = sc.nextInt();
             if(choose == 1) {
-                System.out.println("계좌를 생성하는 절차를 따라주세요.");
+                System.out.println("<계좌 생성>");
                 bank.makeAccount();
             }else if(choose == 2){
-                System.out.println("계좌 정보를 확인하기 위해 계좌번호를 입력하세요.");
+                System.out.println("<계좌 정보 조회>");
                 try{
                     account = bank.findAccount();
                     while(true){
-                        System.out.println("입금을 원하시면 1번, 출금을 원하시면 2번을 눌러주세요. 작업을 취소하시려면 다른 번호를 눌러주세요.");
+                        System.out.println("1.입금 | 2.출금 | 3.작업종료");
                         choose = sc.nextInt();
 
                         if(choose == 1){

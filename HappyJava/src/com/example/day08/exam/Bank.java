@@ -31,7 +31,9 @@ public class Bank {
         }
         Account account = new Account(number, name, 0);
         accountList.add(account);
-        System.out.println("이름: " + name + "계좌번호: " + number);
+        System.out.println("--------------------------------");
+        System.out.println("이름: " + name + " | 계좌번호: " + number);
+        System.out.println("--------------------------------");
     }
 
     public boolean checkAccount(int number){
@@ -49,7 +51,9 @@ public class Bank {
         int number = sc.nextInt();
         for (Account account : accountList) {
             if (account.getNumber() == number) {
-                System.out.println("이름: " + account.getWho() + " 계좌번호: " + account.getNumber() + " 잔액: " + account.getRemain());
+                System.out.println("------------------------------------");
+                System.out.println("이름: " + account.getWho() + " | 계좌번호: " + account.getNumber() + " | 잔액: " + account.getRemain());
+                System.out.println("------------------------------------");
                 return account;
             }
         }
