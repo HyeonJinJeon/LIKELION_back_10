@@ -18,6 +18,7 @@ public class Test {
                 bank.makeAccount();
             }else if(choose == 2){
                 System.out.println("<계좌 정보 조회>");
+                System.out.println("계좌번호를 입력해주세요");
                 try{
                     account = bank.findAccount();
                     while(true){
@@ -48,7 +49,5 @@ public class Test {
             }
 
         }
-
-
     }
 }
