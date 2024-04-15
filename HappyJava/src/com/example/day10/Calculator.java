@@ -1,4 +1,5 @@
 package com.example.day10;
+//제네릭
 
 public class Calculator<T extends Number> {
     private T number;

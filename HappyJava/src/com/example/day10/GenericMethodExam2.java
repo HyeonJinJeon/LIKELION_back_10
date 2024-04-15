@@ -1,4 +1,5 @@
 package com.example.day10;
+//제네릭
 
 public class GenericMethodExam2 {
     public static <T extends Number> T max(T x, T y, T z){

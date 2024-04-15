@@ -1,4 +1,5 @@
 package com.example.day10;
+//제네릭
 
 public class GenericMethodExam {
     public static <T extends Number> void printArrayElements(T[] array){

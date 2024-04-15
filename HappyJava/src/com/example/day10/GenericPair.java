@@ -1,6 +1,7 @@
 package com.example.day10;
 
 import com.example.day09.Book;
+//제네릭
 
 public class GenericPair <T1, T2>{
     private T1 first;

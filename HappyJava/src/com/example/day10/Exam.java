@@ -1,4 +1,5 @@
 package com.example.day10;
+//제네릭이 없었던 시절의 방법
 
 import com.example.day02.Book;
 

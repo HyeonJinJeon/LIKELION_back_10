@@ -1,6 +1,7 @@
 package com.example.day10;
 
 import java.util.*;
+//제네릭
 
 public class NumberProcessor {
     // 상한을 사용하여 제네릭 메소드 정의
