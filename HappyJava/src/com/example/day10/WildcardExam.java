@@ -6,7 +6,8 @@ import java.util.Arrays;
 public class WildcardExam {
     // 아래 두 메소드는 같은 값을 나타낸다! 즉, 비슷한 코드라고 봐도 무방하다.
     // 하지만 와일드카드는 읽는거에 더 적합하다.
-    public static void printList(List<?> list) {;
+    public static void printList(List<?> list) {
+
         for (Object element : list) {
             System.out.println(element);
         }
