@@ -2,6 +2,7 @@ package com.example.day10;
 
 import java.util.List;
 import java.util.ArrayList;
+//제네릭과 와일드카드
 public class WildcardVsGeneric {
     public static void addNumber(List<?> list) {
 // list.add(1); // 이 코드는 컴파일 오류를 발생시킨다. 왜냐하면 ?는 알 수 없는 타입이므로 안전하지 않은 연산으로 간주된다.
