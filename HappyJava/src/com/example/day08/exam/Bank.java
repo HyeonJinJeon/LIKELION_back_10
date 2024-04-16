@@ -1,7 +1,6 @@
 package com.example.day08.exam;
 
 import java.util.ArrayList;
-import java.util.List;
 import java.util.Random;
 import java.util.Scanner;
 
@@ -10,7 +9,6 @@ public class Bank {
 
     private ArrayList<Account> accountList= new ArrayList<Account>();
     private ArrayList<Banker> bankerList;
-    // Banker 객체를 생성하고 리스트에 추가
 
     public Bank(String name) {
         this.name = name;
