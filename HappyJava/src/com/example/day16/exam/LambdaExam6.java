@@ -12,7 +12,6 @@ public class LambdaExam6 {
         boolean flag = true;
 
         List<Integer> list = Arrays.asList(1,5,4,3,7,8,4);
-        List<Integer> even = Arrays.asList(2,4,6,8);
 
         Predicate<Integer> findEven = number -> number % 2 == 0;
         for(Integer number : list){
@@ -22,6 +21,8 @@ public class LambdaExam6 {
             }
         }
         System.out.println(flag);
+
+        List<Integer> even = Arrays.asList(2,4,6,8);
         flag = true;
         for(Integer number : even){
             if (!findEven.test(number)){

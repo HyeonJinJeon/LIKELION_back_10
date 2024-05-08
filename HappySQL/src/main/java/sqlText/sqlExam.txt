@@ -1,0 +1,125 @@
+# 1. `employees` 테이블에서 직원의 이름(first_name), 성(last_name)을 조회하세요.
+    select first_name, last_name
+    from employees;
+# 2. `departments` 테이블에서 모든 부서의 이름(department_name)과 위치 ID(location_id)를 조회하세요.
+    select department_name, location_id
+    from departments;
+# 3. `jobs` 테이블에서 직업 ID(job_id)와 직업 타이틀(job_title)을 조회하세요.
+    select job_id, job_title
+    from jobs;
+# 4. `locations` 테이블에서 각 위치의 주소(street_address)와 우편번호(postal_code)를 조회하세요.
+    select street_address, postal_code
+    from locations;
+# 5. `countries` 테이블에서 국가 ID(country_id)와 국가 이름(country_name)을 조회하세요.
+    select country_id, country_name
+    from countries;
+# 6. `regions` 테이블에서 지역 ID(region_id)와 지역 이름(region_name)을 조회하세요.
+    select region_id, region_name
+    from regions;
+# 7. `employees` 테이블에서 모든 직원의 직업 ID(job_id)를 조회하세요.
+desc employees;
+    select job_id
+    from employees;
+# 8. `departments` 테이블에서 부서 ID(department_id)별로 부서 이름(department_name)을 조회하세요.
+    select department_id, department_name
+    from departments
+    group by department_id;
+# 9. `job_history` 테이블에서 직원 ID(employee_id)와 부서 ID(department_id)를 조회하세요.
+    select employee_id, department_id
+    from job_history;
+# 10. `employees` 테이블에서 직원 ID(employee_id), 이름(first_name)과 성(last_name)을 조회하세요.
+    select employee_id, first_name, last_name
+    from employees;
+#
+# ### WHERE 구문 사용 (조건 검색)
+#
+# 1. `employees` 테이블에서 급여(salary)가 10000 이상인 직원의 이름과 급여를 조회하세요.
+# 2. `departments` 테이블에서 위치 ID(location_id)가 1700인 부서의 이름을 조회하세요.
+# 3. `employees` 테이블에서 직업 ID(job_id)가 'IT_PROG'인 직원들의 전체 정보를 조회하세요.
+# 4. `employees` 테이블에서 부서 ID(department_id)가 90인 직원들의 이름과 급여를 조회하세요.
+# 5. `jobs` 테이블에서 최소 급여(min_salary)가 5000 이상인 직업의 타이틀을 조회하세요.
+# 6. `employees` 테이블에서 성(last_name)이 'King'인 직원의 전체 정보를 조회하세요.
+# 7. `locations` 테이블에서 국가 ID(country_id)가 'US'인 위치의 상세 정보를 조회하세요.
+# 8. `job_history` 테이블에서 시작 날짜(start_date)가 '2001-01-01' 이전인 기록을 조회하세요.
+# 9. `employees` 테이블에서 성(last_name)에 'a'가 포함되는 직원들의 이름과 이메일을 조회하세요.
+
+# 10. `departments` 테이블에서 부서 이름(department_name)이 'Sales'인 부서의 모든 직원 정보를 조회하세요.
+desc departments;
+desc employees;
+use hr;
+select e.*
+from departments d, employees e
+WHERE e.department_id = d.department_id AND d.department_name = 'Sales';
+
+select first_name, upper(last_name)
+from employees;
+
+select employees.first_name, substr(employees.first_name, 1, 1) as inital from employees;
+
+select employees.last_name, length(employees.last_name) - length(replace(employees.last_name, 'a', '')) as a_count
+from employees;
+
+select employees.email, substr(employees.email, instr(employees.email,'@') + 1) as domain from employees;
+
+SELECT e.employee_id
+     , e.first_name
+     , e.email
+     , d.department_name
+FROM employees e
+   , departments d
+WHERE e.department_id = d.department_id;
+
+#모든 사원의 사번, first_name, department_name, city 정보를 조회하고 싶어요
+select employees.employee_id,
+       employees.first_name,
+       employees.email,
+       departments.department_name,
+       locations.city,
+       countries.country_name,
+       regions.region_name
+from employees, departments, locations, countries, regions
+where employees.employee_id = departments.department_id
+  and departments.location_id = locations.location_id
+  and locations.country_id = countries.country_id
+  and countries.region_id = regions.region_id;
+
+#사원이름, 부서명, 급여 를 조회해주세요. 단, 급여가 2500 이상인 사원만 조회하세요.
+select e.first_name, d.department_name, e.salary
+from employees e, departments d
+where e.salary >= 2500;
+
+# 1. 각 직원의 이름과 그들이 속한 부서 이름을 조회 하세요
+select e.first_name, e.last_name, d.department_name
+from employees e, departments d;
+
+# 2. 모든 직원의 이름과 그들의 job_title을 조회하세요
+select e.first_name, e.last_name, j.job_title
+from employees e left outer join jobs j using(job_id);
+
+# 3. 모든 직원의 이름, 부서이름, 근무하는 국가이름(country_name) 을 조회하세요
+SELECT e.first_name, e.last_name, d.department_name, c.country_name
+FROM employees e
+LEFT OUTER JOIN departments d ON e.department_id = d.department_id
+LEFT OUTER JOIN locations l ON d.location_id = l.location_id
+LEFT OUTER JOIN countries c ON l.country_id = c.country_id;
+
+desc employees;
+
+# 4. 1999년 이후에 입사한 직원들과 그들의 job_title을 조회하세요
+select e.first_name, e.last_name, j.job_title, e.hire_date
+from employees e left outer join jobs j using(job_id)
+where substr(hire_date, 1,4) >= 1999;
+
+# 5. 모든 직원의 이름과 그들이 근무한 지역 이름(region_name)을 조회하세요.
+select e.first_name, e.last_name, r.region_name
+from employees e left outer join departments d using(department_id)
+left outer join locations l using(location_id)
+left outer join countries c using(country_id)
+left outer join regions r using(region_id);
+
+# 6. 각 부서에서 근무하는 직원수를 부서 이름과 함께 조회하세요 (join, group by 함께 사용)
+select d.department_name, count(e.employee_id)
+from employees e join departments d using(department_id)
+group by d.department_name;
+
+desc countries;

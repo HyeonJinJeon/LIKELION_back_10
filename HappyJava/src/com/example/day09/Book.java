@@ -34,6 +34,11 @@ public class Book {
             return this.name;
         }
     }
+
+    public String getTitle() {
+        return title;
+    }
+
     public static void main(String[] args) {
         Book book = new Book("모두의 자바");
         book.author.setName("전현진");

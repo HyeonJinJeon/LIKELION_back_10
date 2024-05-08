@@ -11,8 +11,7 @@ import java.util.Scanner;
 public class EchoThreadServer {
     public static void main(String[] args) {
         //ServerSocket 생성... 1개만 있으면 됨,
-        try(ServerSocket serverSocket = new ServerSocket(9999);
-                )
+        try(ServerSocket serverSocket = new ServerSocket(9999);)
         {
             while(true){
                 Socket clientSocket = serverSocket.accept();

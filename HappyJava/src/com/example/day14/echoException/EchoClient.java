@@ -5,7 +5,7 @@ import java.net.Socket;
 
 public class EchoClient {
     public static void main(String[] args) {
-        try(Socket socket = new Socket("127.0.0.1", 1234);
+        try(Socket socket = new Socket("127.0.0.1", 9999);
             PrintWriter pw = new PrintWriter(new OutputStreamWriter(socket.getOutputStream()),true);
             BufferedReader br = new BufferedReader(new InputStreamReader(socket.getInputStream()));
             BufferedReader keybord = new BufferedReader(new InputStreamReader(System.in));)

@@ -3,7 +3,7 @@ package com.example.day16;
 import java.util.*;
 import java.util.function.Consumer;
 
-public class RamdaExam2 {
+public class lambdaExam2 {
     public static void main(String[] args) {
         List<Integer> numbers = Arrays.asList(1,3,2,5,7);
 
