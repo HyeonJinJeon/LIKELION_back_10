@@ -2,40 +2,27 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
+import java.util.*;
+
+import java.util.*;
+
 class Solution {
-    public static String solution(String X, String Y) {
-        StringBuilder xsb = new StringBuilder(X);
-        StringBuilder ysb = new StringBuilder(Y);
-        List<Character> ylist = new ArrayList<>();
-        for(int i = 0; i < ysb.length(); i++){
-            ylist.add(ysb.charAt(i));
-        }
-        String answer = "";
-        for(int i = 0; i < xsb.length(); i++){
-            if(ylist.contains(xsb.charAt(i))){
-                answer += xsb.charAt(i)+"";
-                ylist.remove(xsb.charAt(i));
+    public static String solution(String s, String skip, int index) {
+        StringBuilder answer = new StringBuilder();
+        List <Character> list = new ArrayList<>();
+        for(int i = 97; i < 123; i++){
+            if(!skip.contains(((char)i)+"")){
+                list.add((char)i);
             }
         }
-        StringBuilder asb = new StringBuilder(answer);
-        String[] arr = new String[answer.length()];
-        for(int i = 0; i < asb.length(); i++){
-            arr[i] = asb.charAt(i)+"";
+        System.out.println(list);
+        for(int i = 0; i < s.length(); i++){
+            int result = list.get(list.indexOf(s.charAt(i))+index)%list.size();
+            answer.append((char)result);
         }
-        Arrays.sort(arr);
-        answer = "";
-        for(int i = arr.length-1; i >= 0; i--){
-            answer += arr[i];
-        }
-        if(answer.equals("")){
-            answer = "-1";
-        }else if(answer.charAt(0) == '0'){
-            answer = "0";
-        }
-        return answer;
+        return answer.toString();
     }
-
     public static void main(String[] args) {
-        solution("100", "123450");
+        solution("aukks", "wbqd", 5);
     }
 }

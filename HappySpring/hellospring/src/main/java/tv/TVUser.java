@@ -1,7 +1,13 @@
 package tv;
 
+import java.util.HashMap;
+import java.util.Map;
+
 public class TVUser {
     public static void main(String[] args) {
+        Map<String, Integer> map = new HashMap<>();
+        map.containsKey()
+
 //        STV tv = new STV();
 //        tv.soundOn();
 //        tv.powerOff();

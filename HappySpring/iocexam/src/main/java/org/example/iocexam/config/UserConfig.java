@@ -7,23 +7,31 @@ import org.example.iocexam.service.UserService;
 import org.example.iocexam.service.UserServiceImpl;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
+import org.springframework.context.annotation.Configuration;
 
-@ComponentScan(basePackages = "org.example.iocexam")
+@Configuration
+//@ComponentScan(basePackages = "org.example.iocexam")
 public class UserConfig {
     //IOC 컨테이너에 Bean을 등록하는 방법을 생각해보고 동작 할 수 있도록 작성해주세요.
     //1. javaconfig를 이용해서 동작되도록!!
+    //생성자로 주입
+    @Bean
+    public UserController userController(UserService userService){
+        return new UserController(userService);
+    }
+    //설정자로 주입
+    @Bean
+    public UserService userService(UserDao userJeonDao){
+        UserServiceImpl userService = new UserServiceImpl();
+        userService.setUserDao(userJeonDao);
+        return userService;
+    }
+    @Bean
+    public UserDao userDao(){
+        return new UserDaoImpl();
+    }
+
     //2. componentScan을 이용해서 동작되도록..
 //
-//    @Bean
-//    public UserController joinUser(){
-//        return new UserController();
-//    }
-//    @Bean
-//    public UserDao addUser(){
-//        return new UserDaoImpl();
-//    }
-//    @Bean
-//    UserService insertUser(){
-//        return new UserServiceImpl();
-//    }
+
 }
