@@ -6,23 +6,31 @@ import java.util.*;
 
 import java.util.*;
 
+import java.util.*;
 class Solution {
-    public static String solution(String s, String skip, int index) {
-        StringBuilder answer = new StringBuilder();
-        List <Character> list = new ArrayList<>();
-        for(int i = 97; i < 123; i++){
-            if(!skip.contains(((char)i)+"")){
-                list.add((char)i);
+    public static int solution(int[][] board, int[] moves) {
+        Stack<Integer> result = new Stack<>();
+        int answer = 0;
+
+        for(int i = 0; i < moves.length; i++){
+            int pick = moves[i]-1;
+            for(int j = 0; j < board.length; j++){
+                if(board[j][pick] != 0){
+                    result.push(board[j][pick]);
+                    break;
+                }
+            }
+            if(result.size() >=2 && result.get(result.size()-1) == result.get(result.size()-2)){
+                result.pop();
+                result.pop();
+                answer += 2;
             }
         }
-        System.out.println(list);
-        for(int i = 0; i < s.length(); i++){
-            int result = list.get(list.indexOf(s.charAt(i))+index)%list.size();
-            answer.append((char)result);
-        }
-        return answer.toString();
+        return answer;
     }
     public static void main(String[] args) {
-        solution("aukks", "wbqd", 5);
+        int[][] board ={{0, 0, 0, 0, 0}, {0, 0, 1, 0, 3}, {0, 2, 5, 0, 1}, {4, 2, 4, 4, 2}, {3, 5, 1, 3, 1}};
+        int[] moves = {1, 5, 3, 5, 1, 2, 1, 4};
+        solution(board, moves);
     }
 }
