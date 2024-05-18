@@ -12,14 +12,14 @@ public class UserServiceImpl implements UserService{
     private UserDao userDao;
 //// 생성자로 주입
 //    @Autowired
-//    public UserServiceImpl(UserDao userDao) {
-//        this.userDao = userDao;
-//    }
-// 설정자로 주입
-//    @Autowired
-    public void setUserDao(UserDao userDao) {
+    public UserServiceImpl(UserDao userDao) {
         this.userDao = userDao;
     }
+// 설정자로 주입
+//    @Autowired
+//    public void setUserDao(UserDao userDao) {
+//        this.userDao = userDao;
+//    }
 
     @Override
     public void joinUser(User user) {
