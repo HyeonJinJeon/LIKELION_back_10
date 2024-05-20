@@ -1,9 +1,10 @@
 package org.example.springmvc.controller;
 
-import ch.qos.logback.core.model.Model;
 import jakarta.servlet.http.HttpServletRequest;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.servlet.ModelAndView;
 
 @Controller
 public class MyController {
@@ -30,10 +31,11 @@ public class MyController {
         return "restbody test!!"; // view name
     }
 
+    //Model을 사용
     @GetMapping("greeting")
-    public String greet(@RequestParam(name = "abc", required = false, defaultValue = "Jeon") String name,
+    public String greet(@RequestParam(name = "name", required = false, defaultValue = "jeon") String name,
                         @RequestParam(name = "age", required = false) int age,
-                        HttpServletRequest request){
+                        ModelAndView modelAndView){
         // http://localhost:8888/greeting?abc=h_jinnny&age=26
         // ?name=h_jinnny&age=20 쿼리문자열
         // 실제 매개변수 name에 값을 넣어주는거는 핸들러가 하고 있을 것이다.
@@ -41,9 +43,32 @@ public class MyController {
         System.out.println(name);
         System.out.println(age);
 
-        System.out.println("request:::" + request.getParameter("name"));
-        System.out.println("request:::" + request.getParameter("age"));
+//        System.out.println("request:::" + request.getParameter("name"));
+//        System.out.println("request:::" + request.getParameter("age"));
+
+        modelAndView.addObject("abc", name);
+        modelAndView.setViewName("greeting");
+        //이 때 얻은 값을
 
         return "greeting";
+    }
+
+
+    //ModelAndView를 사용
+    @GetMapping("exam")
+    public ModelAndView exam(@RequestParam(name = "name", required = false, defaultValue = "jeon") String name,
+                        @RequestParam(name = "age", required = false) int age,
+                        ModelAndView modelAndView){
+        System.out.println(name);
+        System.out.println(age);
+
+//        System.out.println("request:::" + request.getParameter("name"));
+//        System.out.println("request:::" + request.getParameter("age"));
+
+        modelAndView.addObject("abc", name);
+        modelAndView.setViewName("exam");
+        //이 때 얻은 값을
+
+        return modelAndView;
     }
 }
