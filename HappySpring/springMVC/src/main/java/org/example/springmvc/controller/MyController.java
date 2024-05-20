@@ -65,7 +65,7 @@ public class MyController {
 //        System.out.println("request:::" + request.getParameter("name"));
 //        System.out.println("request:::" + request.getParameter("age"));
 
-        modelAndView.addObject("abc", name);
+        modelAndView.addObject("name", name);
         modelAndView.setViewName("exam");
         //이 때 얻은 값을
 
