@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products</title>
+</head>
+<body>
+<h1>상품 목록입니다</h1>
+<ul>
+    <li th:each="product : ${products}" th:text=" ${product.id} + ' ' + ${product.name} + ' ' + ${product.price}"></li>
+</ul>
+
+<div th:include="common/footer :: footer"></div>
+</body>
+</html>
