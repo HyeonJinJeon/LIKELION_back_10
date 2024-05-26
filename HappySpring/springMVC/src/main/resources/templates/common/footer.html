@@ -7,6 +7,13 @@
     <title>Exam</title>
 </head>
 <body>
-<h1 th:text="'Hello, '+${name}+ '!!'">hello</h1>
+
+<!--Fragment 정의-->
+<div th:fragment="footer">
+    <footer>
+        <p>&copy; 2024 My Website. All right reserved.</p>
+    </footer>
+</div>
+
 </body>
 </html>
