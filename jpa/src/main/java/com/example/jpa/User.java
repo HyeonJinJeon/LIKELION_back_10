@@ -7,9 +7,8 @@ import lombok.Setter;
 
 @Entity
 @Table(name = "jpa_user")
+@Getter@Setter
 @NoArgsConstructor
-@Getter
-@Setter
 public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -22,4 +21,3 @@ public class User {
         this.email = email;
     }
 }
-
