@@ -6,7 +6,25 @@
 
     <persistence-unit name="UserPU" transaction-type="RESOURCE_LOCAL">
         <provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
-        <class>com.example.jpa.User</class>  <!-- Add this line 어떤 엔티티를 사용할 것인지 작성해줘야함-->
+        <class>com.example.jpa.User</class>  <!-- Add this line -->
+        <class>com.example.jpa.Student</class>
+        <class>com.example.jpa.School</class>
+        <class>com.example.jpa.Author</class>
+        <class>com.example.jpa.Book</class>
+        <class>com.example.jpa.Employee</class>
+        <class>com.example.jpa.Project</class>
+        <class>com.example.jpa.Person</class>
+        <class>com.example.jpa.Passport</class>
+        <class>com.example.jpa.Car</class>
+        <class>com.example.jpa.Truck</class>
+        <class>com.example.jpa.Car2</class>
+        <class>com.example.jpa.Truck2</class>
+        <class>com.example.jpa.Car3</class>
+        <class>com.example.jpa.Truck3</class>
+        <class>com.example.jpa.Company</class>
+        <class>com.example.jpa.practice.Region</class>
+        <class>com.example.jpa.practice.Country</class>
+
         <properties>
             <property name="jakarta.persistence.jdbc.driver" value="com.mysql.cj.jdbc.Driver"/>
             <property name="jakarta.persistence.jdbc.url" value="jdbc:mysql://localhost:3307/exam"/>

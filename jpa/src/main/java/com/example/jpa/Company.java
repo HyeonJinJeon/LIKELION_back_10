@@ -6,23 +6,19 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 @Entity
-@Table(name = "students")
-@Getter
-@Setter
+@Table(name = "companies")
+@Getter@Setter
 @NoArgsConstructor
-public class Student {
+public class Company {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    @Column(nullable = false)
     private String name;
+    @Embedded
+    private Address address;
 
-    @ManyToOne
-    @JoinColumn(name="school_id")
-    private School school;
-
-    public Student(String name, School school) {
+    public Company(String name, Address address) {
         this.name = name;
-        this.school = school;
+        this.address = address;
     }
 }

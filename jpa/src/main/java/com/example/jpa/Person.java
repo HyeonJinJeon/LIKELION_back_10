@@ -6,23 +6,21 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 @Entity
-@Table(name = "students")
-@Getter
-@Setter
+@Table(name = "persons")
 @NoArgsConstructor
-public class Student {
+@Getter@Setter
+public class Person {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+
     @Column(nullable = false)
     private String name;
 
-    @ManyToOne
-    @JoinColumn(name="school_id")
-    private School school;
+    @OneToOne(mappedBy = "person", cascade = CascadeType.ALL, orphanRemoval = true)
+    private Passport passport;
 
-    public Student(String name, School school) {
+    public Person(String name) {
         this.name = name;
-        this.school = school;
     }
 }
