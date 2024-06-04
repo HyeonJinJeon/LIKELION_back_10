@@ -1,0 +1,38 @@
+### File Upload Test
+POST http://localhost:8080/upload
+Content-Type: multipart/form-data; boundary=----WebKitFormBoundary7MA4YWxkTrZu0gW
+
+------WebKitFormBoundary7MA4YWxkTrZu0gW
+Content-Disposition: form-data; name="file"; filename="cat.jpg"
+Content-Type: image/jpeg
+
+< /Users/jeonhyeonjin/Desktop/__run/file/cat.jpg
+------WebKitFormBoundary7MA4YWxkTrZu0gW
+Content-Disposition: form-data; name="info"
+Content-Type: application/json
+
+{"description": "Sample file upload", "tag": "test"}
+------WebKitFormBoundary7MA4YWxkTrZu0gW--
+
+###File Upload Test
+POST http://localhost:8080/upload
+Content-Type: multipart/form-data; boundary=----WebKitFormBoundary7MA4YWxkTrZu0gW
+
+------WebKitFormBoundary7MA4YWxkTrZu0gW
+Content-Disposition: form-data; name="file"; filename="cat.jpg"
+Content-Type: image/jpeg
+
+< /Users/jeonhyeonjin/Desktop/__run/file/cat.jpg
+------WebKitFormBoundary7MA4YWxkTrZu0gW
+Content-Disposition: form-data; name="info"; filename="info.json"
+Content-Type: application/json
+
+{"description": "Sample file upload", "tag": "test"}
+------WebKitFormBoundary7MA4YWxkTrZu0gW--
+
+{"description": "Sample file upload", "tag": "test"}
+------WebKitFormBoundary7MA4YWxkTrZu0gW--
+
+### File Download Test
+GET http://localhost:8080/download
+Accept: image/jpeg
